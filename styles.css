@@ -1,0 +1,64 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #0a0a0a;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+  padding: 2rem;
+}
+
+.logo {
+  width: 50vw;
+  max-width: 220px;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+}
+
+.social-links {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.social-links a {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 1rem;
+  transition: opacity 0.2s ease;
+}
+
+.social-links a:hover {
+  opacity: 0.7;
+}
+
+.coming-soon {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+footer {
+  font-size: 0.8rem;
+  color: #888;
+}
+
+footer a {
+  color: #aaa;
+  text-decoration: none;
+  margin: 0 0.25rem;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
