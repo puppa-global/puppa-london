@@ -5,13 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Puppa London – Seafood Pasta in Whitechapel</title>
 
-  <meta name="description" content="Puppa London – Venetian seafood pasta bar opening soon in Whitechapel, London. Handmade pasta. Coastal flavour. Italian soul." />
+  <meta name="description" content="Puppa London – Venetian seafood pasta bar now open in Whitechapel, London. Handmade pasta. Coastal flavour. Italian soul." />
   <meta name="keywords" content="Puppa London, Venetian seafood pasta, Whitechapel restaurant, Italian food London, East London food, pasta bar, seafood pasta London" />
   <meta name="theme-color" content="#111" />
 
   <!-- OpenGraph -->
-  <meta property="og:title" content="Puppa London – Opening Soon" />
-  <meta property="og:description" content="Venetian seafood pasta bar opening soon at 68 Whitechapel High Street, London." />
+  <meta property="og:title" content="Puppa London – Now Open" />
+  <meta property="og:description" content="Venetian seafood pasta bar now open at 68 Whitechapel High Street, London." />
   <meta property="og:image" content="/images/puppa-london-profile.png" />
   <meta property="og:url" content="https://puppa.london" />
   <meta property="og:type" content="restaurant" />
@@ -44,107 +44,81 @@
   <link rel="manifest" href="/images/site.webmanifest" />
   <link rel="stylesheet" href="/styles.css" />
 
+  <!-- Cookie Consent Banner -->
   <link rel="stylesheet" id="silktide-consent-manager-css" href="cookie-banner/silktide-consent-manager.css">
-<script src="cookie-banner/silktide-consent-manager.js"></script>
-<script>
-silktideCookieBannerManager.updateCookieBannerConfig({
-  background: {
-    showBackground: true
-  },
-  cookieIcon: {
-    position: "bottomLeft"
-  },
-  cookieTypes: [
-    {
-      id: "necessary",
-      name: "Necessary",
-      description: "<p>These cookies are necessary for the website to function properly and cannot be switched off. They help with things like logging in and setting your privacy preferences.</p>",
-      required: true,
-      onAccept: function() {
-        console.log('Add logic for the required Necessary here');
-      }
-    },
-    {
-      id: "analytics",
-      name: "Analytical",
-      description: "<p>These cookies help us improve the site by tracking which pages are most popular and how visitors move around the site.</p>",
-      defaultValue: true,
-      onAccept: function() {
-        gtag('consent', 'update', {
-          analytics_storage: 'granted',
-        });
-        dataLayer.push({
-          'event': 'consent_accepted_analytics',
-        });
+  <script src="cookie-banner/silktide-consent-manager.js"></script>
+  <script>
+  silktideCookieBannerManager.updateCookieBannerConfig({
+    background: { showBackground: true },
+    cookieIcon: { position: "bottomLeft" },
+    cookieTypes: [
+      {
+        id: "necessary", name: "Necessary",
+        description: "<p>These cookies are necessary for the website to function properly and cannot be switched off.</p>",
+        required: true,
+        onAccept: function() {}
       },
-      onReject: function() {
-        gtag('consent', 'update', {
-          analytics_storage: 'denied',
-        });
-      }
-    },
-    {
-      id: "advertising",
-      name: "Advertising",
-      description: "<p>These cookies provide extra features and personalization to improve your experience. They may be set by us or by partners whose services we use.</p>",
-      onAccept: function() {
-        gtag('consent', 'update', {
-          ad_storage: 'granted',
-          ad_user_data: 'granted',
-          ad_personalization: 'granted',
-        });
-        dataLayer.push({
-          'event': 'consent_accepted_advertising',
-        });
+      {
+        id: "analytics", name: "Analytical", defaultValue: true,
+        description: "<p>These cookies help us improve the site by tracking which pages are most popular.</p>",
+        onAccept: function() {
+          gtag('consent', 'update', { analytics_storage: 'granted' });
+          dataLayer.push({ 'event': 'consent_accepted_analytics' });
+        },
+        onReject: function() {
+          gtag('consent', 'update', { analytics_storage: 'denied' });
+        }
       },
-      onReject: function() {
-        gtag('consent', 'update', {
-          ad_storage: 'denied',
-          ad_user_data: 'denied',
-          ad_personalization: 'denied',
-        });
+      {
+        id: "advertising", name: "Advertising",
+        description: "<p>These cookies personalise your experience and may be set by us or our partners.</p>",
+        onAccept: function() {
+          gtag('consent', 'update', {
+            ad_storage: 'granted', ad_user_data: 'granted', ad_personalization: 'granted'
+          });
+          dataLayer.push({ 'event': 'consent_accepted_advertising' });
+        },
+        onReject: function() {
+          gtag('consent', 'update', {
+            ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied'
+          });
+        }
       }
-    }
-  ],
-  text: {
-    banner: {
-      description: "<p>We use cookies on our site to enhance your user experience, provide personalized content, and analyze our traffic. <a href=\"https://puppa.london/privacy.html\" target=\"_blank\">Cookie Policy.</a></p>",
-      acceptAllButtonText: "Accept all",
-      acceptAllButtonAccessibleLabel: "Accept all cookies",
-      rejectNonEssentialButtonText: "Reject non-essential",
-      rejectNonEssentialButtonAccessibleLabel: "Reject non-essential",
-      preferencesButtonText: "Preferences",
-      preferencesButtonAccessibleLabel: "Toggle preferences"
+    ],
+    text: {
+      banner: {
+        description: "<p>We use cookies to enhance your experience and analyse traffic. <a href='/privacy.html' target='_blank'>Privacy Policy</a></p>",
+        acceptAllButtonText: "Accept all",
+        rejectNonEssentialButtonText: "Reject non-essential",
+        preferencesButtonText: "Preferences"
+      },
+      preferences: {
+        title: "Customize your cookie preferences",
+        description: "<p>You can choose not to allow some types of cookies.</p>"
+      }
     },
-    preferences: {
-      title: "Customize your cookie preferences",
-      description: "<p>We respect your right to privacy. You can choose not to allow some types of cookies. Your cookie preferences will apply across our website.</p>",
-      creditLinkText: "Get this banner for free",
-      creditLinkAccessibleLabel: "Get this banner for free"
-    }
-  },
-  position: {
-    banner: "bottomRight"
-  }
-});
-</script>
+    position: { banner: "bottomRight" }
+  });
+  </script>
 
   <!-- Google Analytics -->
-<script type="text/plain" data-cookie-consent="analytics" async src="https://www.googletagmanager.com/gtag/js?id=G-B0WVSDN7JD"></script>
-<script type="text/plain" data-cookie-consent="analytics">
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-</script>
+  <script type="text/plain" data-cookie-consent="analytics" async src="https://www.googletagmanager.com/gtag/js?id=G-B0WVSDN7JD"></script>
+  <script type="text/plain" data-cookie-consent="analytics">
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+  </script>
 </head>
+
 <body>
   <main class="hero">
     <img src="/images/puppa-london-profile.png" alt="Puppa London Logo" class="logo" />
 
     <div class="tagline">A touch of Venice in London</div>
-    <div class="coming-soon">OPENING SOON</div>
+    <div class="coming-soon">NOW OPEN</div>
 
     <div class="social-icons">
       <a href="https://instagram.com/puppalondon" target="_blank" aria-label="Instagram">
+        <!-- Instagram SVG -->
         <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
           <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
@@ -152,6 +126,7 @@ silktideCookieBannerManager.updateCookieBannerConfig({
         </svg>
       </a>
       <a href="mailto:info@puppa.london" aria-label="Email">
+        <!-- Email SVG -->
         <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <path d="M4 4h16c1.1 0 2 .9 2 2v1l-10 6L2 7V6c0-1.1.9-2 2-2z" />
           <path d="M22 6v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6" />
